@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 function fetchCurrentWeather(longitude, latitude, isDegC, isMetric) {
   const searchURL = new URL(
     "https://api.open-meteo.com/v1/forecast?latitude=" +
@@ -158,13 +156,13 @@ export async function fetchUniWeather(query, isDegC, isMetric) {
     }
     return "N/A";
   }
-  
+  console.log('start fetching...');
   // Get unique list of universities from query, return error if length is 0
   let uniList = new Set(await fetchUniversities(query));
   if (uniList.size === 0)
     return Promise.reject(new Error("No results found for query."));
   uniList = Array.from(uniList);
-
+  console.log('fetchUni.');
   // Get list of coordinates for each school, retry fetching 3 times with 0.5s timeout
   const coordList = await Promise.all(
     uniList.map(async (uni) => {
@@ -175,7 +173,7 @@ export async function fetchUniWeather(query, isDegC, isMetric) {
       }
     )
   ).then((arr) => arr.filter((x) => !x.rej));
-
+  console.log('fetchLonLat');
   // Get list of weather data for individual universities
   const weatherList = await Promise.all(
     coordList.map(async (uni) => {
@@ -197,7 +195,7 @@ export async function fetchUniWeather(query, isDegC, isMetric) {
         location: uni.val.location,
       });
     })).catch(err => console.log(err.message));
-  
+    
   return weatherList;
 }
 
