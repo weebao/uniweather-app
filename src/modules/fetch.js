@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 function fetchCurrentWeather(longitude, latitude, isDegC, isMetric) {
   const searchURL = new URL(
     "https://api.open-meteo.com/v1/forecast?latitude=" +
