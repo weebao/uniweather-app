@@ -153,11 +153,11 @@ function UniTile({data, isDegC, isMetric}) {
             className={"gradient" + (isHovered ? " gradient-activated" : "")}
           >
             <Box ref={backRef} sx={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: '12px', sm: '16px' } }}>
                 <Box sx={{ display: 'flex', alignItems: 'top', gap: '0rem' }}>
                   <Typography 
                     variant="caption" 
-                    sx={{ fontSize: { xs: '3.5rem', md: '3.75rem' }, fontWeight: 600, lineHeight: 1 }}
+                    sx={{ fontSize: { xs: '3.25rem', sm: '3.5rem', md: '3.75rem' }, fontWeight: 600, lineHeight: 1 }}
                   >
                     {typeof data.curTemp === "string" ? data.curTemp :
                       data.curTemp.toFixed(0).replace('-0', '0')}
