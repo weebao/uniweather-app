@@ -38,15 +38,23 @@ function UniTile({data, isDegC, isMetric}) {
   // Handling backside's width and height resizing
   const [frontHeight, setFrontHeight] = useState(0);
   const [backHeight, setBackHeight] = useState(0);
+  const [isSmallTile, setIsSmallTile] = useState(false);
+  const [isXSmallTile, setIsXSmallTile] = useState(false);
+
   const frontRef = useRef(null);
   const backRef = useRef(null);
+  const tileRef = useRef(null);
 
   function adjustBackSize() {
-    if(frontRef.current !== null) {
+    if (frontRef.current !== null) {
       setFrontHeight(frontRef.current.clientHeight);
     }
-    if(backRef.current !== null) {
+    if (backRef.current !== null) {
       setBackHeight(backRef.current.clientHeight + 64);
+    }
+    if (tileRef.current !== null) {
+      setIsSmallTile(tileRef.current.clientWidth <= 500);
+      setIsXSmallTile(tileRef.current.clientWidth <= 400);
     }
   }
 
@@ -90,6 +98,7 @@ function UniTile({data, isDegC, isMetric}) {
     <Grid item
       tabIndex="0" 
       aria-label={`Weather data of ${data.name}`}
+      ref={tileRef}
       sx={{
         display: 'table',
         perspective: { xs: '1800px', md: '1500px' },
@@ -153,16 +162,16 @@ function UniTile({data, isDegC, isMetric}) {
             className={"gradient" + (isHovered ? " gradient-activated" : "")}
           >
             <Box ref={backRef} sx={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: '12px', sm: '16px' } }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: (isSmallTile ? '12px' : '16px') }}>
                 <Box sx={{ display: 'flex', alignItems: 'top', gap: '0rem' }}>
                   <Typography 
                     variant="caption" 
-                    sx={{ fontSize: { xs: '3.25rem', sm: '3.5rem', md: '3.75rem' }, fontWeight: 600, lineHeight: 1 }}
+                    sx={{ fontSize: (isSmallTile ? (isXSmallTile ? '2.75rem' : '3.25rem') : '3.5rem'), fontWeight: 600, lineHeight: 1 }}
                   >
                     {typeof data.curTemp === "string" ? data.curTemp :
                       data.curTemp.toFixed(0).replace('-0', '0')}
                   </Typography>
-                  <Typography variant="h1" sx={{ fontSize: '1.5rem', fontWeight: 500, lineHeight: 1.6 }}>{isDegC ? "°C" : "°F"}</Typography>
+                  <Typography variant="h1" sx={{ fontSize: (isSmallTile ? (isXSmallTile ? '1.18rem' : '1.4rem') : '1.5rem'), fontWeight: 500, lineHeight: 1.6 }}>{isDegC ? "°C" : "°F"}</Typography>
                 </Box>
                 <TwoTemps temp1={data.maxTemp} temp2={data.minTemp} label1="High" label2="Low" />
                 <TwoTemps temp1={data.appTemp} temp2={data.dew} label1="Feels like" label2="Dewpoint" />
