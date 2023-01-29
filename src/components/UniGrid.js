@@ -139,7 +139,7 @@ function UniTile({data, isDegC, isMetric}) {
           <Paper
             sx={{
               position: 'absolute',
-              top: ((isClicked && isHovered) ? `${Math.abs(frontHeight - backHeight) / 2}px` : '0px'),
+              top: ((isClicked && isHovered) ? `${(frontHeight - backHeight) / 2}px` : '0px'),
               left: '0px',
               transform: {
                 xs: 'rotateY(180deg) scale(1.025) !important',
