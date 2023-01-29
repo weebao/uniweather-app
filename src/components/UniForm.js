@@ -58,7 +58,7 @@ export function UniForm(props) {
         alignItems: 'center',
         justifyContent: 'center',
         gap: {xs: 3, md: 4},
-        margin: {xs: 3, sm: 4, md: 5},
+        margin: {xs: 2, sm: 3, md: 4},
       }}
       onKeyPress={handleKeyPress}
     >
