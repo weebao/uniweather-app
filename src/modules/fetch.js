@@ -1,3 +1,5 @@
+import trie from 'trie-prefix-tree';
+
 function fetchCurrentWeather(longitude, latitude, isDegC, isMetric) {
   const searchURL = new URL(
     "https://api.open-meteo.com/v1/forecast?latitude=" +
@@ -112,20 +114,24 @@ function fetchLonAndLat(query) {
   );
 }
 
-function fetchUniversities(query) {
-  // Initialize link and append query to the link
-  const searchURL = new URL("http://universities.hipolabs.com/search?");
-  searchURL.searchParams.append("name", query);
+// Load all universties data in Trie data structure for better searching time
+var isUniDataLoaded = false; // Prevent reloading data
+var prefixTree;
+var nameIndex = {};
 
-  // Fetch data, then return error if length is 0, else return list of school names
-  return fetch(searchURL.toString())
-    .then((response) =>
-      response.ok ? response.json() : Promise.reject(response.statusText)
-    )
-    .then(
-      (json) => json.map((school) => school.name),
-      (reason) => Promise.reject(new Error(reason))
-    );
+async function loadUniData() {
+  const data = await fetch("https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json")
+                      .then((response) => response.ok ? response.json() : Promise.reject(response.statusText))
+                      .catch((reason) => Promise.reject(new Error(reason)));
+  data.forEach((uni) => nameIndex[uni.name.toLowerCase()] = uni.name);
+  prefixTree = trie(Object.keys(nameIndex));
+  isUniDataLoaded = true;
+}
+
+async function fetchUniversities(query) {
+  if (query === undefined) { return []; }
+  if (!isUniDataLoaded) { await loadUniData(); }
+  return prefixTree.getPrefix(query.toLowerCase()).map((name) => nameIndex[name]);
 }
 
 export async function fetchUniWeather(query, isDegC, isMetric) {
@@ -156,13 +162,13 @@ export async function fetchUniWeather(query, isDegC, isMetric) {
     }
     return "N/A";
   }
-  console.log('start fetching...');
+  
   // Get unique list of universities from query, return error if length is 0
   let uniList = new Set(await fetchUniversities(query));
   if (uniList.size === 0)
     return Promise.reject(new Error("No results found for query."));
   uniList = Array.from(uniList);
-  console.log('fetchUni.');
+  
   // Get list of coordinates for each school, retry fetching 3 times with 0.5s timeout
   const coordList = await Promise.all(
     uniList.map(async (uni) => {
@@ -173,7 +179,7 @@ export async function fetchUniWeather(query, isDegC, isMetric) {
       }
     )
   ).then((arr) => arr.filter((x) => !x.rej));
-  console.log('fetchLonLat');
+
   // Get list of weather data for individual universities
   const weatherList = await Promise.all(
     coordList.map(async (uni) => {
