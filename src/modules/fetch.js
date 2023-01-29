@@ -1,4 +1,5 @@
 import trie from 'trie-prefix-tree';
+import { v1 as uuid1 } from  'uuid';
 
 function fetchCurrentWeather(longitude, latitude, isDegC, isMetric) {
   const searchURL = new URL(
@@ -123,7 +124,14 @@ async function loadUniData() {
   const data = await fetch("https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json")
                       .then((response) => response.ok ? response.json() : Promise.reject(response.statusText))
                       .catch((reason) => Promise.reject(new Error(reason)));
-  data.forEach((uni) => nameIndex[uni.name.toLowerCase()] = uni.name);
+  data.forEach((uni) => {
+    let name = uni.name;
+    let splitted = name.split(' ');
+    nameIndex[name.toLowerCase()] = name;
+    if (splitted.length > 1) {
+      splitted.forEach((str) => nameIndex[str.toLowerCase() + uuid1()] = name);
+    }
+  });
   prefixTree = trie(Object.keys(nameIndex));
   isUniDataLoaded = true;
 }
