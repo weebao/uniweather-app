@@ -104,7 +104,10 @@ export const getThemedComponents = (mode) => ({
                     background: `radial-gradient(circle 60rem at top left, ${lightBlue[300]} -20%, ${purple[300]}, ${lightBlue[300]} 200%)`,
                   },
                   '&.gradient-activated': {
-                    transform: 'scale(1.05)',
+                    transform: 'scale(1.025)',
+                    '@media (min-width: 600px)': {
+                      transform: 'scale(1.05)',
+                    },
                     boxShadow: '0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)',
                   },
                   '&.gradient-activated::before': {
@@ -140,7 +143,10 @@ export const getThemedComponents = (mode) => ({
                   width: '100%',
                   boxShadow: '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
                   '&.gradient-activated': {
-                    transform: 'scale(1.05)',
+                    transform: 'scale(1.025)',
+                    '@media (min-width: 600px)': {
+                      transform: 'scale(1.05)',
+                    },
                     boxShadow: '0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)',
                   },
                 },

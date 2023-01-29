@@ -59,7 +59,7 @@ export function UniForm(props) {
         justifyContent: 'center',
         gap: {xs: 3, md: 4},
         margin: {xs: 1.5, sm: 3, md: 4},
-        mb: {xs: 3, sm: 4, md: 5},
+        mb: {xs: 4, sm: 5, md: 6},
       }}
       onKeyPress={handleKeyPress}
     >

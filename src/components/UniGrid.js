@@ -141,7 +141,10 @@ function UniTile({data, isDegC, isMetric}) {
               position: 'absolute',
               top: ((isClicked && isHovered) ? `${Math.abs(frontHeight - backHeight) / 2}px` : '0px'),
               left: '0px',
-              transform: 'rotateY(180deg) scale(1.05) !important',
+              transform: {
+                xs: 'rotateY(180deg) scale(1.025) !important',
+                sm: 'rotateY(180deg) scale(1.05) !important'
+              },
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
