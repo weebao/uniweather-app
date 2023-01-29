@@ -1,6 +1,5 @@
 import { useState, useEffect, useTransition, useRef } from 'react';
 import { Grid, Box, Container, Paper, Typography } from '@mui/material';
-import { amber, deepOrange, grey, blue, common } from '@mui/material/colors';
 
 import WMOCode from '../modules/wmo.json';
 
@@ -155,7 +154,7 @@ function UniTile({data, isDegC, isMetric}) {
                 <Box sx={{ display: 'flex', alignItems: 'top', gap: '0rem' }}>
                   <Typography 
                     variant="caption" 
-                    sx={{ fontSize: {xs: '3.5rem', md: '3.75rem'}, fontWeight: 600, lineHeight: 1 }}
+                    sx={{ fontSize: { xs: '3.5rem', md: '3.75rem' }, fontWeight: 600, lineHeight: 1 }}
                   >
                     {typeof data.curTemp === "string" ? data.curTemp :
                       data.curTemp.toFixed(0).replace('-0', '0')}

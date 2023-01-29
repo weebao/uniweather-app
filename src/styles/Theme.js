@@ -83,7 +83,10 @@ export const getThemedComponents = (mode) => ({
                   color: '#fff !important',
                   backgroundColor: 'transparent !important',
                   backfaceVisibility: 'hidden',
-                  padding: '32px !important',
+                  padding: '28px !important',
+                  '@media (min-width: 600px)': {
+                    padding: '32px !important',
+                  },
                   borderRadius: '1rem',
                   overflow: 'hidden',
                   transition: 'ease 0.4s',
@@ -126,7 +129,10 @@ export const getThemedComponents = (mode) => ({
               root: {
                 '&.gradient': {
                   backfaceVisibility: 'hidden',
-                  padding: '32px !important',
+                  padding: '28px !important',
+                  '@media (min-width: 600px)': {
+                    padding: '32px !important',
+                  },
                   borderRadius: '1rem',
                   overflow: 'hidden',
                   transition: 'ease 0.4s',

@@ -18,8 +18,6 @@ export default function Home() {
   const [mode, setMode] = useState();
   const [isPending, startTransition] = useTransition();
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const isSmall = useMediaQuery('(min-width: 600px)');
-  const isMedium = useMediaQuery('(min-width: 900px)');
 
   useEffect(() => {
     setMode(prefersDarkMode ? 'dark' : 'light');
@@ -37,6 +35,9 @@ export default function Home() {
     () => createTheme(deepmerge(getDesignTokens(mode), getThemedComponents(mode))),
     [mode]
   ));
+
+  const isSmall = useMediaQuery(theme.breakpoints.up('sm'));
+  const isMedium = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <ColorModeContext.Provider value={colorMode}>
@@ -56,8 +57,8 @@ export default function Home() {
               variant="outlined"
               sx={{
                 position: 'absolute',
-                top: '32px',
-                right: '32px',
+                top: { sm: '32px', md: '40px' },
+                right: { sm: '32px', md: '40px' },
               }}
               endIcon={
                 mode === 'dark' 
