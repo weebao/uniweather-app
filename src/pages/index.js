@@ -79,8 +79,8 @@ export default function Home() {
               variant="outlined"
               sx={{
                 position: {xs: 'absolute'},
-                top: '24px',
-                right: '24px',
+                top: '16px',
+                right: '16px',
                 border: '1px solid ' + theme.palette.modeBtn.main + "80",
                 borderRadius: '4px'
               }}
