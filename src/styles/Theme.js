@@ -67,9 +67,6 @@ export const getThemedComponents = (mode) => ({
             zIndex: 1,
             borderRadius: '1rem',
             transition: 'ease 0.4s',
-            '@media (max-width: 400px)': {
-              transition: 'ease 0.5s',
-            },
             padding: '0px !important',
             '&.isFlipped': {
               transform: 'rotateY(180deg)'
