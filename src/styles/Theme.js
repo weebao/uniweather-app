@@ -101,6 +101,9 @@ export const getThemedComponents = (mode) => ({
                     width: '300%',
                     height: '300%',
                     transition: 'transform cubic-bezier(0, 0.55, 0.92, 0.88) 0.4s',
+                    '@media (max-width: 400px)': {
+                      transition: 'transform cubic-bezier(0, 0.55, 0.92, 0.88) 0.1s !important',
+                    },
                     background: `radial-gradient(circle 60rem at top left, ${lightBlue[300]} -20%, ${purple[300]}, ${lightBlue[300]} 200%)`,
                   },
                   '&.gradient-activated': {
