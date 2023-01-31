@@ -32,6 +32,7 @@ export function UniForm(props) {
     .catch(err => setRes(<ErrorMes mes={err.message} />));
   }
 
+  // Submit when hit enter
   function handleKeyPress() {
     if (event.keyCode === 13) {
       handleSubmit();

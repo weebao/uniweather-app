@@ -55,6 +55,7 @@ export const getThemedComponents = (mode) => ({
         }
       }
     },
+    // Making the container flipping feels 3D
     MuiContainer: {
       styleOverrides: {
         root: {
@@ -65,7 +66,10 @@ export const getThemedComponents = (mode) => ({
             color: '#fff',
             zIndex: 1,
             borderRadius: '1rem',
-            transition: 'ease 0.4s, height ease 0.1s',
+            transition: 'ease 0.4s',
+            '@media (max-width: 400px)': {
+              transition: 'ease 0.6s',
+            },
             padding: '0px !important',
             '&.isFlipped': {
               transform: 'rotateY(180deg)'
@@ -102,7 +106,7 @@ export const getThemedComponents = (mode) => ({
                     height: '300%',
                     transition: 'transform cubic-bezier(0, 0.55, 0.92, 0.88) 0.4s',
                     '@media (max-width: 400px)': {
-                      transition: 'transform cubic-bezier(0, 0.55, 0.92, 0.88) 1s !important',
+                      transition: 'transform cubic-bezier(0, 0.55, 0.92, 0.88) 1s',
                     },
                     background: `radial-gradient(circle 60rem at top left, ${lightBlue[300]} -20%, ${purple[300]}, ${lightBlue[300]} 200%)`,
                   },

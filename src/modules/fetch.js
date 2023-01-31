@@ -128,6 +128,7 @@ async function loadUniData() {
     let name = uni.name;
     let splitted = name.split(' ');
     nameIndex[name.toLowerCase()] = name;
+    // Split name into words by space and add them into nameIndex with a hash ID so these schools can also be searched by single words
     if (splitted.length > 1) {
       splitted.forEach((str) => nameIndex[str.toLowerCase() + uuid1()] = name);
     }
