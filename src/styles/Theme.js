@@ -68,7 +68,7 @@ export const getThemedComponents = (mode) => ({
             borderRadius: '1rem',
             transition: 'ease 0.4s',
             '@media (max-width: 400px)': {
-              transition: 'ease 0.6s',
+              transition: 'ease 0.5s',
             },
             padding: '0px !important',
             '&.isFlipped': {
@@ -105,9 +105,9 @@ export const getThemedComponents = (mode) => ({
                     left: 0,
                     width: '300%',
                     height: '300%',
-                    transition: 'transform ease 0.4s',
+                    transition: 'transform cubic-bezier(0, 0.55, 0.92, 0.88) 0.4s',
                     '@media (max-width: 400px)': {
-                      transition: 'transform ease 0.8s',
+                      transition: 'transform cubic-bezier(0, 0.55, 0.92, 0.88) 0.8s',
                     },
                     background: `radial-gradient(circle 60rem at top left, ${lightBlue[300]} -20%, ${purple[300]}, ${lightBlue[300]} 200%)`,
                   },
