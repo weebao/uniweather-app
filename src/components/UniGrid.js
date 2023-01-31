@@ -148,11 +148,11 @@ function UniTile({data, isDegC, isMetric}) {
           <Paper
             sx={{
               position: 'absolute',
-              top: ((isClicked && isHovered) ? `${(frontHeight - backHeight) / 2}px` : '0px'),
+              top: 0,
               left: '0px',
               transform: {
-                xs: 'rotateY(180deg) scale(1.025) !important',
-                sm: 'rotateY(180deg) scale(1.05) !important'
+                xs: ((isClicked && isHovered) ? `translateY(${(frontHeight - backHeight) / 2}px) ` : '') + 'rotateY(180deg) scale(1.025) !important',
+                sm: ((isClicked && isHovered) ? `translateY(${(frontHeight - backHeight) / 2}px) ` : '') + 'rotateY(180deg) scale(1.05) !important'
               },
               display: 'flex',
               flexDirection: 'column',
