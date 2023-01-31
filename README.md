@@ -19,10 +19,10 @@ This is a website that looks up universities around the world and displays their
 
 ### Screenshot
 
-#### Light mode
+#### Light mode:
 ![](./src/images/light_mode.png)
 
-#### Dark mode
+#### Dark mode:
 ![](./src/images/dark_mode.jpg)
 
 ### Links
