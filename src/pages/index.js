@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/head';
 import dynamic from 'next/dynamic';
-import { useState, useMemo, useEffect, useTransition } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 
 import { Button, IconButton, CssBaseline } from '@mui/material';
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
@@ -16,7 +16,6 @@ import { ColorModeContext } from '../config/color-context';
 export default function Home() {
   // Handling theme settings
   const [mode, setMode] = useState();
-  const [isPending, startTransition] = useTransition();
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   useEffect(() => {

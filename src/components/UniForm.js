@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { useState, useMemo, useTransition } from 'react';
+import { useState } from 'react';
 import { fetchUniWeather } from '../modules/fetch';
 const UniGrid = dynamic(() => import('./UniGrid'));
 
