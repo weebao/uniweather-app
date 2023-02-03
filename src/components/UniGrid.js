@@ -1,4 +1,4 @@
-import { useState, useEffect, useTransition, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Grid, Box, Container, Paper, Typography } from '@mui/material';
 
 import WMOCode from '../modules/wmo.json';
