@@ -59,7 +59,7 @@ This is a website that looks up universities around the world and displays their
 - Another problem is that the transition between light mode and dark mode gets slower the more universities there is. I figured it might have been the states of the university cards are interrupting the light/dark mode states, so I tried React's new hook `useTransition` on the cards states to lower their priorities which might help the light/dark mode states be set more quickly. However, the light/dark mode transition is still slow. I wonder if I was using the hook incorrectly. I am still thinking of other ways.
 
 ### Highlights
-- One thing I did that I don't know why I did that is that I personally wrote the weather description for every weather state. Here are a few examples:
+- One thing I did that I don't know why I did is that I personally wrote the weather description for every weather state. Here are a few examples:
   - "It is clear outside. You might want to take a walk!"
   - "It is cloudy right now, but I hope you will always be sunny within yourself."
   - "It is quite windy and dusty outside. Perhaps you should wear sunglasses to protect your pretty eyes."
