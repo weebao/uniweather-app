@@ -66,7 +66,7 @@ This is a website that looks up universities around the world and displays their
 
 - I am also glad that I went through with the flipping animation. I decided to finish with only the gradient animation but when I thought about the flipping animation, I planned to give up on it at some point since it was a lot harder than I thought, but I still kept going on with it in the end and it allowed me to learn how to come up with creative solutions during tough times. I am grateful for that.
 
-- I also learned a bit of basic UI concepts such as padding should be in multiple of 4s and paying attention on the readability and grouping of elements using smaller padding.
+- I also learned a bit of basic UI concepts such as padding should be in multiple of 4s and I should attention on the readability and grouping of elements using smaller padding.
 
 ### Built with
 
