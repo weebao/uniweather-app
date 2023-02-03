@@ -53,7 +53,10 @@ This is a website that looks up universities around the world and displays their
 - The final solution I had was instead of having the container with the gradient background, I set it to transparent and have each sides of the card handle the gradient background instead. I have both sides as `position: absolute` and set the container to the front side's height only for the first render. Thus, the website doesn't have to re-render whenever a card is flipped, and since the container is transparent, the two sides can be shown with their own heights.
 
 ### Future plans
+
 - There is still one problem which is that whenever I go on the website with my phone (light mode), the gradient animation glitches a bit but it doesn't glitch when I try it on desktop with mobile layout and throttling. I am still working on how to fix this.
+
+- Another problem is that the transition between light mode and dark mode gets slower the more universities there is. I figured it might have been the states of the university cards are interrupting the light/dark mode states, so I tried React's new hook `useTransition` on the cards states to lower their priorities which might help the light/dark mode states be set more quickly. However, the light/dark mode transition is still slow. I wonder if I was using the hook incorrectly. I am still thinking of other ways.
 
 ### Highlights
 - One thing I did that I don't know why I did that is that I personally wrote the weather description for every weather state. Here are a few examples:
