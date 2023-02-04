@@ -166,7 +166,7 @@ function UniTile({data, isDegC, isMetric}) {
                 <Box sx={{ display: 'flex', alignItems: 'top', gap: '0rem' }}>
                   <Typography 
                     variant="caption" 
-                    sx={{ fontSize: (isSmallTile ? (isXSmallTile ? '3rem' : '3.25rem') : '3.5rem'), fontWeight: 600, lineHeight: 1 }}
+                    sx={{ fontSize: (isSmallTile ? (isXSmallTile ? '2.75rem' : '3.25rem') : '3.5rem'), fontWeight: 600, lineHeight: 1 }}
                   >
                     {typeof data.curTemp === "string" ? data.curTemp :
                       data.curTemp.toFixed(0).replace('-0', '0')}
