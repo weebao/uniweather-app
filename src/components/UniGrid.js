@@ -171,7 +171,7 @@ function UniTile({data, isDegC, isMetric}) {
                     {typeof data.curTemp === "string" ? data.curTemp :
                       data.curTemp.toFixed(0).replace('-0', '0')}
                   </Typography>
-                  <Typography variant="h1" sx={{ fontSize: (isSmallTile ? (isXSmallTile ? '1.18rem' : '1.4rem') : '1.5rem'), fontWeight: 500, lineHeight: 1.6 }}>{isDegC ? "°C" : "°F"}</Typography>
+                  <Typography variant="h2" sx={{ fontSize: (isSmallTile ? (isXSmallTile ? '1.18rem' : '1.4rem') : '1.5rem'), fontWeight: 500, lineHeight: 1.6 }}>{isDegC ? "°C" : "°F"}</Typography>
                 </Box>
                 <TwoTemps temp1={data.maxTemp} temp2={data.minTemp} label1="High" label2="Low" />
                 <TwoTemps temp1={data.appTemp} temp2={data.dew} label1="Feels like" label2="Dewpoint" />
