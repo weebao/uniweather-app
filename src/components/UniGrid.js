@@ -162,7 +162,7 @@ function UniTile({data, isDegC, isMetric}) {
             className={"gradient" + (isHovered ? " gradient-activated" : "")}
           >
             <Box ref={backRef} sx={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: (isSmallTile ? '12px' : '16px') }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: (isSmallTile ? (isXSmallTile ? '8px' : '12px') : '16px') }}>
                 <Box sx={{ display: 'flex', alignItems: 'top', gap: '0rem' }}>
                   <Typography 
                     variant="caption" 
