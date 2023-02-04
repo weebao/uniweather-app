@@ -84,7 +84,7 @@ export const getThemedComponents = (mode) => ({
                   color: '#fff !important',
                   backgroundColor: 'transparent !important',
                   backfaceVisibility: 'hidden',
-                  padding: '26px !important',
+                  padding: '24px !important',
                   '@media (min-width: 600px)': {
                     padding: '32px !important',
                   },
@@ -137,7 +137,7 @@ export const getThemedComponents = (mode) => ({
               root: {
                 '&.gradient': {
                   backfaceVisibility: 'hidden',
-                  padding: '28px !important',
+                  padding: '24px !important',
                   '@media (min-width: 600px)': {
                     padding: '32px !important',
                   },
