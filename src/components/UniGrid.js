@@ -53,8 +53,8 @@ function UniTile({data, isDegC, isMetric}) {
       setBackHeight(backRef.current.clientHeight + 64);
     }
     if (tileRef.current !== null) {
-      setIsSmallTile(tileRef.current.clientWidth <= 500);
-      setIsXSmallTile(tileRef.current.clientWidth <= 400);
+      setIsSmallTile(tileRef.current.clientWidth <= 450);
+      setIsXSmallTile(tileRef.current.clientWidth <= 375);
     }
   }
 
@@ -109,7 +109,7 @@ function UniTile({data, isDegC, isMetric}) {
       onMouseLeave={resetFlip}
     >
         <Container tabIndex="0" className={(isClicked && isHovered) ? "isFlipped" : ""}>
-          <Paper ref={frontRef}  sx={{ position: 'absolute' }} className={"gradient" + (isHovered ? " gradient-activated" : "")}>
+          <Paper id="front-side" ref={frontRef}  sx={{ position: 'absolute' }} className={"gradient" + (isHovered ? " gradient-activated" : "")}>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <Typography variant="h2" sx={{ fontSize: {xs: '1.5rem'}, fontWeight: 600 }}>{data.name}</Typography>
               <Box sx={{ mb: 2, mt: 0.5 }}>{data.location}</Box>
@@ -146,6 +146,7 @@ function UniTile({data, isDegC, isMetric}) {
             </Box>
           </Paper>
           <Paper
+            id="back-side"
             sx={{
               position: 'absolute',
               top: 0,
