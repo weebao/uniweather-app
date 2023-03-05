@@ -82,7 +82,8 @@ export const getThemedComponents = (mode) => ({
               root: {
                 '&.gradient': {
                   color: '#fff !important',
-                  backgroundColor: 'transparent !important',
+                  backgroundImage: `radial-gradient(circle 60rem at top left, ${lightBlue[300]} -20%, ${purple[300]}, ${lightBlue[300]} 200%)`,
+                  backgroundSize: '300% 300%',
                   backfaceVisibility: 'hidden',
                   padding: '24px !important',
                   '@media (min-width: 600px)': {
@@ -93,30 +94,13 @@ export const getThemedComponents = (mode) => ({
                   transition: 'ease 0.4s',
                   width: '100%',
                   boxShadow: '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
-                  '&::before': {
-                    position: 'absolute',
-                    content: '""',
-                    zIndex: -1,
-                    borderRadius: '1rem',
-                    top: 0,
-                    left: 0,
-                    width: '300%',
-                    height: '300%',
-                    transition: 'transform cubic-bezier(0, 0.55, 0.92, 0.88) 0.4s',
-                    '@media (max-width: 400px)': {
-                      transition: 'transform cubic-bezier(0, 0.55, 0.92, 0.88) 0.8s',
-                    },
-                    background: `radial-gradient(circle 60rem at top left, ${lightBlue[300]} -20%, ${purple[300]}, ${lightBlue[300]} 200%)`,
-                  },
                   '&.gradient-activated': {
                     transform: 'scale(1.025)',
+                    backgroundPosition: '100% 100%',
                     '@media (min-width: 600px)': {
                       transform: 'scale(1.05)',
                     },
                     boxShadow: '0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)',
-                  },
-                  '&.gradient-activated::before': {
-                    transform: 'translate(-60%, -60%)',
                   },
                 },
               }

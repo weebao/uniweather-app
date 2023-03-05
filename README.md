@@ -54,7 +54,7 @@ This is a website that looks up universities around the world and displays their
 
 ### Future plans
 
-- There is still one problem which is that whenever I go on the website with my phone (light mode), the gradient animation glitches a bit but it doesn't glitch when I try it on desktop with mobile layout and throttling. I am still working on how to fix this.
+- There is still one problem which is that whenever I go on the website with my phone (light mode), the gradient animation glitches a bit but it doesn't glitch when I try it on desktop with mobile layout and throttling. I am still working on how to fix this. (Fixed by using background-position method instead of background::before method)
 
 - Another problem is that the transition between light mode and dark mode gets slower the more universities there is. I figured it might have been the states of the university cards are interrupting the light/dark mode states, so I tried React's new hook `useTransition` on the cards states to lower their priorities which might help the light/dark mode states be set more quickly. However, the light/dark mode transition is still slow. I wonder if I was using the hook incorrectly. I am still thinking of other ways.
 
