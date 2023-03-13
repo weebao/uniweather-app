@@ -132,6 +132,11 @@ async function loadUniData() {
     if (splitted.length > 1) {
       splitted.forEach((str) => nameIndex[str.toLowerCase() + uuid1()] = name);
     }
+    // Use shortened name from domain address to help searching with words like MIT, NYU, etc.
+    let short = uni.domains?.shift().split(".")[0] ?? "";
+    if (short !== "") {
+      nameIndex[short + uuid1()] = name;
+    }
   });
   prefixTree = trie(Object.keys(nameIndex));
   isUniDataLoaded = true;
