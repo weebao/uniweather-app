@@ -60,6 +60,8 @@ This is a website that looks up universities around the world and displays their
 
 - [x] I also want to optimize the search engine so that keywords such as MIT, NYU or UMass would also work. Also, I would like to implement scroll-js library to improve the UI as well. (Done temporarily by using domain names)
 
+- [ ] Limit the number of universities displayed when clicked search. Fetch more only when the user tries to scroll down (Like posts feed on Facebook or Twitter).
+
 ### Highlights
 - One thing I did that I don't know why I did is that I personally wrote the weather description for every weather state. Here are a few examples:
   - "It is clear outside. You might want to take a walk!"
