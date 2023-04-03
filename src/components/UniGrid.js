@@ -13,7 +13,7 @@ export default function UniGrid({list, isDegC, isMetric}) {
         display: 'grid',
         width: '100%', 
         alignItems: 'center',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(348px, 1fr))', 
+        gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', 
       }} 
       gap={3}
     >
