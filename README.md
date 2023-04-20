@@ -2,6 +2,7 @@
 
 ## Table of contents
 
+- [Installation](#installation)
 - [Overview](#overview)
   - [Introduction](#introduction)
   - [Screenshot](#screenshot)
@@ -14,8 +15,27 @@
   - [Built with](#built-with)
 - [Author](#author)
 
-
-## Introduction
+## Installation
+Clone the repo to your local computer:
+```
+git clone https://github.com/weebao/uniweather-app.git
+```
+Install and build all the necessary packages and modules
+```
+npm install
+npm run build
+```
+To run the website on a locally hosted server:
+```
+npm start
+```
+To run the website in development mode (so that the website updates for every change in your code):
+```
+npm run dev
+```
+Hope you enjoy!
+## Overview
+### Introduction
 This is a website that looks up universities around the world and displays their weather data.
 
 ### Screenshot
