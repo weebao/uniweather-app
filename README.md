@@ -20,7 +20,7 @@ Clone the repo to your local computer:
 ```
 git clone https://github.com/weebao/uniweather-app.git
 ```
-Install and build all the necessary packages and modules
+Install and build all the necessary packages and modules:
 ```
 npm install
 npm run build
