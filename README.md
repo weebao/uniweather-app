@@ -83,7 +83,7 @@ This is a website that looks up universities around the world and displays their
 - [ ] Limit the number of universities displayed when clicked search. Fetch more only when the user tries to scroll down (Like posts feed on Facebook or Twitter).
 
 ### Highlights
-- One thing I did that I don't know why I did is that I personally wrote the weather description for every weather state. Here are a few examples:
+- One thing I love about this website is that I personally wrote the weather description for every weather state. Here are a few examples:
   - "It is clear outside. You might want to take a walk!"
   - "It is cloudy right now, but I hope you will always be sunny within yourself."
   - "It is quite windy and dusty outside. Perhaps you should wear sunglasses to protect your pretty eyes."
