@@ -8,11 +8,11 @@
   - [Screenshot](#screenshot)
   - [Features](#features)
   - [Links](#links)
+  - [Built with](#built-with)
 - [My process](#my-process)
   - [Challenges](#challenges)
   - [Highlights](#highlights)
   - [Future plans](#future-plans)
-  - [Built with](#built-with)
 - [Author](#author)
 
 ## Installation
@@ -46,11 +46,25 @@ This is a website that looks up universities around the world and displays their
 #### Dark mode:
 ![](./src/images/dark_mode.jpg)
 
+### Features
+- Look up weather data of over 500+ universities around the world
+- Fully compatible with devices of all sizes
+- Personalized weather reports to make it more friendly :D
+
 ### Links
 
 - Live Site URL: [UniWeather](https://uniweather-baodang.vercel.app/)
 
-## My process
+## Built with
+
+- [React](https://reactjs.org/) - JS library
+- [NextJS](https://nextjs.org/) - React Framework
+- [Material UI](https://mui.com/) - React UI Tools
+- Flexbox and Grid
+
+## Process
+This is mainly for me to review my thought process. Please feel free to skip this part :D
+### My process
 
 - I started by working on API fetching. I did this part as homework for one of my classes.
 - There are three APIs in total: Universities API (For looking up universities), Geocoding API (For getting the coordinates of those universities), Weather API (For getting the weather data of those coordinates).
@@ -91,13 +105,6 @@ This is a website that looks up universities around the world and displays their
 - I am also glad that I went through with the flipping animation. I decided to finish with only the gradient animation but when I thought about the flipping animation, I planned to give up on it at some point since it was a lot harder than I thought, but I still kept going on with it in the end and it allowed me to learn how to come up with creative solutions during tough times. I am grateful for that.
 
 - I also learned a bit of basic UI concepts such as padding should be in multiple of 4s and I should pay attention on the readability and grouping of elements using smaller padding.
-
-### Built with
-
-- [React](https://reactjs.org/) - JS library
-- [NextJS](https://nextjs.org/) - React Framework
-- [Material UI](https://mui.com/) - React UI Tools
-- Flexbox and Grid
 
 
 ## Author
