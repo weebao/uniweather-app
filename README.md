@@ -11,8 +11,8 @@
   - [Built with](#built-with)
 - [My process](#my-process)
   - [Challenges](#challenges)
-  - [Highlights](#highlights)
   - [Future plans](#future-plans)
+  - [Highlights](#highlights)
 - [Author](#author)
 
 ## Installation
