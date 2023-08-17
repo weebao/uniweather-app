@@ -33,7 +33,7 @@ export const getThemedComponents = (mode) => ({
   typography: {
     allVariants: {
       fontFamily: 'Open Sans',
-      fontSize: '16px',
+      fontSize: '1rem',
       letterSpacing: 0,
       lineHeight: 1.5
     },
