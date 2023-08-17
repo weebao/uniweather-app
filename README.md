@@ -8,11 +8,11 @@
   - [Screenshot](#screenshot)
   - [Features](#features)
   - [Links](#links)
+  - [Built with](#built-with)
 - [My process](#my-process)
   - [Challenges](#challenges)
-  - [Highlights](#highlights)
   - [Future plans](#future-plans)
-  - [Built with](#built-with)
+  - [Highlights](#highlights)
 - [Author](#author)
 
 ## Installation
@@ -46,11 +46,25 @@ This is a website that looks up universities around the world and displays their
 #### Dark mode:
 ![](./src/images/dark_mode.jpg)
 
+### Features
+- Look up weather data of over 500+ universities around the world
+- Fully compatible with devices of all sizes
+- Personalized weather reports to make it more friendly :D
+
 ### Links
 
 - Live Site URL: [UniWeather](https://uniweather-baodang.vercel.app/)
 
-## My process
+## Built with
+
+- [React](https://reactjs.org/) - JS library
+- [NextJS](https://nextjs.org/) - React Framework
+- [Material UI](https://mui.com/) - React UI Tools
+- Flexbox and Grid
+
+## Process
+This is mainly for me to review my thought process. Please feel free to skip this part :D
+### My process
 
 - I started by working on API fetching. I did this part as homework for one of my classes.
 - There are three APIs in total: Universities API (For looking up universities), Geocoding API (For getting the coordinates of those universities), Weather API (For getting the weather data of those coordinates).
@@ -83,7 +97,7 @@ This is a website that looks up universities around the world and displays their
 - [ ] Limit the number of universities displayed when clicked search. Fetch more only when the user tries to scroll down (Like posts feed on Facebook or Twitter).
 
 ### Highlights
-- One thing I did that I don't know why I did is that I personally wrote the weather description for every weather state. Here are a few examples:
+- One thing I love about this website is that I personally wrote the weather description for every weather state. Here are a few examples:
   - "It is clear outside. You might want to take a walk!"
   - "It is cloudy right now, but I hope you will always be sunny within yourself."
   - "It is quite windy and dusty outside. Perhaps you should wear sunglasses to protect your pretty eyes."
@@ -91,13 +105,6 @@ This is a website that looks up universities around the world and displays their
 - I am also glad that I went through with the flipping animation. I decided to finish with only the gradient animation but when I thought about the flipping animation, I planned to give up on it at some point since it was a lot harder than I thought, but I still kept going on with it in the end and it allowed me to learn how to come up with creative solutions during tough times. I am grateful for that.
 
 - I also learned a bit of basic UI concepts such as padding should be in multiple of 4s and I should pay attention on the readability and grouping of elements using smaller padding.
-
-### Built with
-
-- [React](https://reactjs.org/) - JS library
-- [NextJS](https://nextjs.org/) - React Framework
-- [Material UI](https://mui.com/) - React UI Tools
-- Flexbox and Grid
 
 
 ## Author
