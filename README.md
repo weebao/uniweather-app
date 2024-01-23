@@ -36,7 +36,9 @@ npm run dev
 Hope you enjoy!
 ## Overview
 ### Introduction
-This is a website that looks up universities around the world and displays their weather data.
+A website for looking up universities around the world and viewing their weather data.
+
+This started as a homework for a class but I realized I needed this since I usually forget where my friend's university, Embry-Riddle, is and I'm too lazy to look up the location.
 
 ### Screenshot
 
